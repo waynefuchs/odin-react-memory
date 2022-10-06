@@ -7,12 +7,23 @@ import { useState } from "react";
 
 const GameBoard = () => {
   const [score, setScore] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
   const [chosenCards, setChosenCards] = useState([]);
   const [animals, setAnimals] = useState(startingAnimals);
+  const [isGameOver, setIsGameOver] = useState(false);
+
+  const resetGame = () => {
+    setScore(0);
+    setChosenCards([]);
+    setAnimals(startingAnimals);
+    setIsGameOver(false);
+  }
 
   const cardClicked = (name) => {
     if (chosenCards.includes(name)) {
       console.log("Game Over");
+      if(score > bestScore) setBestScore(score);
+      setIsGameOver(true);
       return null;
     }
 
@@ -29,11 +40,14 @@ const GameBoard = () => {
   return (
     <div className="memory">
       <h1>Memory</h1>
-      <Score score={score} />
-      <GameOver />
+      <Score score={score} bestScore={bestScore} />
+      <GameOver isGameOver={isGameOver} reset={resetGame} />
       <div className="game-board">
         {animals.map((a) => (
-          <Card animal={a} click={cardClicked} />
+          <Card 
+            animal={a} 
+            click={cardClicked}
+            key={a.id} />
         ))}
       </div>
     </div>

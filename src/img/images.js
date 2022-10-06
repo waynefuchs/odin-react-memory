@@ -1,3 +1,5 @@
+import uniqid from "uniqid";
+
 import bird from "./bird-icon.png";
 import cat from "./black-cat-icon.png";
 import bunny from "./bunny-icon.png";
@@ -15,21 +17,21 @@ import turkey from "./turkey-icon.png";
 import turtle from "./turtle-icon.png";
 
 const animals = [
-  { name: "bird", img: bird },
-  { name: "cat", img: cat },
-  { name: "bunny", img: bunny },
-  { name: "chicken", img: chicken },
-  { name: "cow", img: cow },
-  { name: "crab", img: crab },
-  { name: "dog", img: dog },
-  { name: "dolphin", img: dolphin },
-  { name: "jellyfish", img: jellyfish },
-  { name: "mouse", img: mouse },
-  { name: "pig", img: pig },
-  { name: "sheep", img: sheep },
-  { name: "squirrel", img: squirrel },
-  { name: "turkey", img: turkey },
-  { name: "turtle", img: turtle },
+  { name: "bird", img: bird, id: uniqid() },
+  { name: "cat", img: cat, id: uniqid() },
+  { name: "bunny", img: bunny, id: uniqid() },
+  { name: "chicken", img: chicken, id: uniqid() },
+  { name: "cow", img: cow, id: uniqid() },
+  { name: "crab", img: crab, id: uniqid() },
+  { name: "dog", img: dog, id: uniqid() },
+  { name: "dolphin", img: dolphin, id: uniqid() },
+  { name: "jellyfish", img: jellyfish, id: uniqid() },
+  { name: "mouse", img: mouse, id: uniqid() },
+  { name: "pig", img: pig, id: uniqid() },
+  { name: "sheep", img: sheep, id: uniqid() },
+  { name: "squirrel", img: squirrel, id: uniqid() },
+  { name: "turkey", img: turkey, id: uniqid() },
+  { name: "turtle", img: turtle, id: uniqid() },
 ];
 
 export default animals;

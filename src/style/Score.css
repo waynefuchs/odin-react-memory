@@ -2,10 +2,16 @@
     min-height: 300px;
 }
 
+.score > h2 {
+    margin: 0;
+}
+
 .score {
     position: absolute;
-    top: 250px;
+    top: 200px;
     left: 3rem;
-    display: flex;
-    gap: 1rem;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: .25rem;
 }

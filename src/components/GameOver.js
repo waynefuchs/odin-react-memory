@@ -1,10 +1,14 @@
 import "../style/GameOver.css";
 
-const GameOver = () => {
+const GameOver = (props) => {
+  const {isGameOver, reset} = props;
+
+  if(!isGameOver) return null;
+
   return (
-    <div className="game-over hidden">
+    <div className="game-over">
       <h2>Game Over!</h2>
-      <button>Try Again!</button>
+      <button onClick={reset}>Try Again!</button>
     </div>
   );
 };
