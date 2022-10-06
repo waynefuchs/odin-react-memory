@@ -12,4 +12,9 @@
 
     display: grid;
     grid-template-rows: auto;
+    padding: 1rem;
+}
+
+.game-over.hidden {
+    display: none;
 }

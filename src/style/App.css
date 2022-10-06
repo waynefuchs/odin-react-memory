@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+
 :root {
+  font-family: 'East Sea Dokdo', cursive;
   margin: 0;
   border: 0;
 }
 
 body {
   background-image: url('../img/farm.jpeg');
-  /* background-size: 100vw 10vh; */
-  object-fit: 100vw 100vh cover;
-  background-repeat: no-repeat;
+  background-size: auto;
+  background-repeat: repeat-x;
   background-color: #b9ccb8;
 }

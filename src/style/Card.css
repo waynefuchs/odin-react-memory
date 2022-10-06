@@ -1,3 +1,11 @@
+.card > img {
+    max-width: 15vw;
+}
+
+.card > p {
+    margin: 0;
+}
+
 .card {
     display: grid;
     grid-template-columns: auto;

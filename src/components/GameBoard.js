@@ -27,7 +27,8 @@ const GameBoard = () => {
   };
 
   return (
-    <div>
+    <div className="memory">
+      <h1>Memory</h1>
       <Score score={score} />
       <GameOver />
       <div className="game-board">

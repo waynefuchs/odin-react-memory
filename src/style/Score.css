@@ -1,8 +1,11 @@
 .scorecard {
-    min-height: 600px;
+    min-height: 300px;
 }
 
 .score {
+    position: absolute;
+    top: 250px;
+    left: 3rem;
     display: flex;
     gap: 1rem;
 }
