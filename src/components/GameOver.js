@@ -7,7 +7,7 @@ const GameOver = (props) => {
 
   return (
     <div className="game-over">
-      <h2>Game Over!</h2>
+      <h2>{isGameOver === "won" ? "You Win!" : "Game Over!"}</h2>
       <button onClick={reset}>Try Again!</button>
     </div>
   );

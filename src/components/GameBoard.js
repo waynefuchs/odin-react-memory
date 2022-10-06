@@ -12,6 +12,11 @@ const GameBoard = () => {
   const [animals, setAnimals] = useState(startingAnimals);
   const [isGameOver, setIsGameOver] = useState(false);
 
+  const setWinCondition = (score) => {
+    setIsGameOver("won");
+    setBestScore(score);
+  }
+
   const resetGame = () => {
     setScore(0);
     setChosenCards([]);
@@ -21,11 +26,12 @@ const GameBoard = () => {
 
   const cardClicked = (name) => {
     if (chosenCards.includes(name)) {
-      console.log("Game Over");
       if(score > bestScore) setBestScore(score);
       setIsGameOver(true);
       return null;
     }
+
+    if(score + 1 === animals.length) setWinCondition(score + 1);
 
     setScore(score + 1);
     setChosenCards(chosenCards.concat(name));
