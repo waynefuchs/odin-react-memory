@@ -1,0 +1,8 @@
+.scorecard {
+    min-height: 600px;
+}
+
+.score {
+    display: flex;
+    gap: 1rem;
+}
